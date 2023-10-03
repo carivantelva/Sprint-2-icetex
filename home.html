@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./carrito.js" defer>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center #333 py-3 px-4">
+        <h1 class="text-light">Bienvenido, Carlos Tello</h1>
+
+        <div class="cart">
+            <p class="carrito">carrito desde js</p>
+
+
+        </div>
+        <a class="nav-link" href="#">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+        </a>
+        <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="/images/Usuario.png" alt="Imagen de Usuario" class="rounded-circle"
+                    style="width: 40px; height: 40px;">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EL ROPERO DE LILY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Prendas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Mujer</a></li>
+                            <li><a class="dropdown-item" href="#">Hombre</a></li>
+                            <li><a class="dropdown-item" href="#">Niñas</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <section id="informacion-sitio" class="bg-light p-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="row">
+                        
+                          
+                            <div class="col-md-3">
+                                
+                                <img src="./images/chaqueta.jpg" alt="imagen 1" class="img-fluid"
+                                    style="max-height: 200px;">
+                                    <h5 class="card-title">chaqueta azul</h5>
+                                    <p class="card-text">Descripción del producto.</p>
+                                    <p class="card-text">$20.00</p>
+                                    <button class="btn btn-secondary add-to-cart" data-name="Producto 1"
+                                        data-price="20.00">Agregar al Carrito</button>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/falda.jpg" alt="imagen 2" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/falda2.jpg" alt="imagen 3" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/jean.jpg" alt="imagen 4" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/jean1.jpg" alt="imagen 5" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/camisa.jpg" alt="imagen 6" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/chaqueta.jpg" alt="imagen 7" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/chaqueta2.jpg" alt="imagen 8" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images//jean4.jpg" alt="imagen 9" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/pantalon.jpg" alt="imagen 10" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/jean2.jpg" alt="imagen 11" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./images/bolso.jpg" alt="imagen 12" class="img-fluid"
+                                    style="max-height: 200px;">
+                                <h6 class="text-center mt-3">nombre articulo</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+
+    <footer class="bg-secondary text-white text-center py-3">
+        <p class="mb-0">&copy; 2023 Tienda de Ropa Usada El Ropero de Lily</p>
+    </footer>
+
+</body>
+
+</html>
