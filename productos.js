@@ -38,7 +38,7 @@
         
         function cargarProductos() {
             const productosContainer = document.getElementById("productos-container");
-
+        
             // Itera sobre la estructura de datos y crea elementos HTML para cada producto
             productos.forEach(producto => {
                 const productoHTML = `
@@ -49,6 +49,7 @@
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">${producto.descripcion}</p>
                                 <p class="card-text">${producto.precio}</p>
+                                <button class="btn btn-success" onclick="agregarAlCarrito('${producto.nombre}', '${producto.precio}')">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
@@ -56,7 +57,12 @@
                 productosContainer.innerHTML += productoHTML;
             });
         }
+        
 /************************************************************* */
+function agregarAlCarrito(nombre, precio) {
+    // Puedes agregar aquí la lógica para agregar el producto al carrito
+    alert(`Agregaste "${nombre}" al carrito por ${precio}`);
+}
 
        
   
