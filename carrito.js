@@ -1,6 +1,6 @@
 
 
-    // Datos del carrito (puedes cargar esto desde una fuente de datos externa)
+    // Datos del carrito )
     const cart = [
         { name: "Producto 1", price: 10.00, quantity: 1 },
         { name: "Producto 2", price: 15.00, quantity: 1 },
@@ -49,6 +49,13 @@
 
         location.reload()
     }
+
+    /************************************************ */
+
+    
+
+
+    /**************************************************** */
 
     // Inicializar el carrito
     updateCart();

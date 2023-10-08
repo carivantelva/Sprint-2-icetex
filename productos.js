@@ -4,34 +4,34 @@
             {
                 nombre: "blusa",
                 descripcion: "blusa color azul",
-                precio: "$19.99",
+                precio: "$10.000",
                 imagen: "./images/blusa.jpg"
             },
             {
+                nombre: "pantalon jean",
+                descripcion: "pantalon dama",
+                precio: "$12.00",
+                imagen: "./images/jean2.jpg"
+            },
+            {
                 nombre: "chequeta jean",
-                descripcion: "Dchaqueta hombre",
-                precio: "$29.99",
+                descripcion: "chaqueta hombre",
+                precio: "$18.000",
                 imagen: "./images/chaqueta.jpg"
+            },
+            {
+                nombre: "falda jean",
+                descripcion: "falda dama",
+                precio: "$14.500",
+                imagen: "./images/falda.jpg"
             },
             {
                 nombre: "chequeta jean",
                 descripcion: "Dchaqueta hombre",
-                precio: "$29.99",
-                imagen: "./images/chaqueta.jpg"
+                precio: "$20.000",
+                imagen: "./images/bolso.jpg"
             },
-            {
-                nombre: "chequeta jean",
-                descripcion: "Dchaqueta hombre",
-                precio: "$29.99",
-                imagen: "./images/chaqueta.jpg"
-            },
-            {
-                nombre: "chequeta jean",
-                descripcion: "Dchaqueta hombre",
-                precio: "$29.99",
-                imagen: "./images/chaqueta.jpg"
-            },
-            // Agrega más productos aquí
+            
         ];
 
         // Función para cargar los productos en la página
@@ -60,10 +60,9 @@
         
 /************************************************************* */
 function agregarAlCarrito(nombre, precio) {
-    // Puedes agregar aquí la lógica para agregar el producto al carrito
+    
     alert(`Agregaste "${nombre}" al carrito por ${precio}`);
 }
-
        
   
 
