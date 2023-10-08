@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Admin</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./carrito.js" defer>
 
-    <script src="./productos.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,40 +24,32 @@
             text-align: center;
             padding: 20px;
         }
+
+        section {
+            padding: 20px;
+        }
     </style>
-
-
 </head>
-
 <body>
-    
     <header class="d-flex justify-content-between align-items-center #333 py-3 px-4">
-        <h1 class="text-light">Bienvenido, Carlos Tello</h1>
-
+        <h1 class="text-light">Admin</h1>
         
-        <a class="nav-link" href="#">
-            <i class="fas fa-shopping-cart fa-lg"></i>
-        </a>
         <div class="dropdown">
             <a class="btn btn-light dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <img src="/images/Usuario.png" alt="Imagen de Usuario" class="rounded-circle"
                     style="width: 40px; height: 40px;">
             </a>
-
+            
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li><a class="dropdown-item" href="#">Configuración</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
             </ul>
         </div>
-
+        
     </header>
-
-
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
@@ -77,58 +66,80 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Prendas
+                            <i class="fas fa-cog"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Mujer</a></li>
-                            <li><a class="dropdown-item" href="#">Hombre</a></li>
-                            <li><a class="dropdown-item" href="#">Niñas</a></li>
-                            <li><a class="dropdown-item" href="#">Niños</a></li>
-                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="#">Inventario</a></li>
+                            <li><a class="dropdown-item" href="#">Historial de compras</a></li>
+                            <li><a class="dropdown-item" href="#">Registro de ventas</a></li>
+                            <li><a class="dropdown-item" href="#">Permisos de Usuarios</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
-
+                
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
-
+                
             </div>
         </div>
     </nav>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        
-    <section id="informacion-sitio" class="bg-light p-4">
-        <div class="container">
-            <div class="container mt-4">
-                <div class="row" id="productos-container">
-                    <!-- Los productos se cargarán aquí dinámicamente -->
-                </div>
-            </div>
-    </section>
+    
+    
+    <br>
+    <br>
+<h4>cuerpo donde aparecera toda la informacion que requiera el Usuario Admin</h4>
+
+<div class="col-md-3">
+    <img src="./images/chaqueta.jpg" alt="imagen 1" class="img-fluid" style="max-height: 200px;">
+    <h5 class="card-title">chaqueta azul</h5>
+    <p class="card-text">Descripción del producto.</p>
+    <p class="card-text">$20.00</p>
+    <p class="available-quantity">Cantidad disponible: <span>10</span></p> <!-- Agregamos la cantidad disponible -->
+    <button class="btn btn-secondary add-to-cart" data-name="Producto 1" data-price="20.00">Agregar al Carrito</button>
+</div>
+
+
+
+
+<br > 
+<br>
+<br>
+<br>
+<br>
 
 
     <footer class="bg-secondary text-white text-center py-3">
         <p class="mb-0">&copy; 2023 Tienda de Ropa Usada El Ropero de Lily</p>
     </footer>
-
     <script>
-        // Función para manejar el clic en el icono del carrito
-        document.querySelector('.fa-shopping-cart').addEventListener('click', function () {
-            // Ocultar la vista actual (aquí puedes usar el selector adecuado para tu vista actual)
-            document.querySelector('#informacion-sitio').style.display = 'none';
+        // Capturamos el botón "Agregar al Carrito"
+        const addToCartButton = document.querySelector('.add-to-cart');
     
-            // Redirigir al usuario a la vista del carrito (reemplaza 'carrito.html' con la URL correcta)
-            window.location.href = 'carrito.html';
+        // Capturamos el elemento que muestra la cantidad disponible
+        const availableQuantityElement = document.querySelector('.available-quantity span');
+    
+        // Definimos la cantidad inicial disponible
+        let availableQuantity = 10; // Puedes ajustar esto a la cantidad que desees
+    
+        // Agregamos un evento al botón para descontar la cantidad disponible al hacer clic
+        addToCartButton.addEventListener('click', () => {
+            if (availableQuantity > 0) {
+                availableQuantity--;
+                availableQuantityElement.textContent = availableQuantity; // Actualizamos la cantidad disponible en la página
+                alert('Producto agregado al carrito.');
+            } else {
+                alert('No hay más productos disponibles.');
+            }
         });
     </script>
     
-
+    
 </body>
-
 </html>
