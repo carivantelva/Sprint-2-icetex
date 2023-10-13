@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    
+
+    <script src="./carrito.js"defer></script>
+
+
+    <style>
+        body {
+            background-color: #d6cccc;
+        }
+
+
+        .four.columns {
+            /* Establecer un ancho fijo para el contenedor */
+            width: 25%;
+            /* 25% del ancho total, ya que parece que estás utilizando un sistema de 4 columnas */
+            padding: 10px;
+            /* Espacio alrededor del contenedor */
+            box-sizing: border-box;
+            /* Incluir el relleno en el ancho total */
+        }
+
+        .card {
+            /* Establecer un tamaño fijo para la tarjeta */
+            width: 100%;
+            height: 100%;
+            /* Asegúrate de que la tarjeta ocupe todo el espacio vertical */
+            border: 2px solid #ccc;
+           
+        }
+
+        .imagen-curso {
+            /* Establecer un tamaño fijo para la imagen */
+            width: 60%;
+            height: auto;
+            /* Permitir que la altura de la imagen se ajuste automáticamente */
+        }
+
+        .info-card {
+            
+            padding: 10px;
+        }
+
+        .d-flex {
+            background-color: #333;
+        }
+
+        /* Media query para dispositivos móviles con un ancho máximo de 768px */
+        @media screen and (max-width: 768px) {
+
+            /* Establecer el diseño de una sola columna */
+            .four.columns {
+                width: 100%;
+            }
+        }
+
+        
+
+        ul {
+    list-style: none;
+   
+
+
+}
+
+
+.submenu {
+    position: relative;
+    
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    border: solid 1px #555;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.borrar-articulo {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.button{
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+
+
+  th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="d-flex justify-content-between align-items-center #333 py-3 px-4">
+        <h1 class="text-light">Bienvenido, Carlos Tello</h1>
+
+        <ul>
+            <li class="submenu">
+                <img src="img/carrito.png" id="img-carrito">
+                <div id="carrito">
+
+                    <table id="lista-carrito" class="u-full-width">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#" id="comprarBtn" class="button u-full-width">Comprar</a>
+                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="/images/Usuario.png" alt="Imagen de Usuario" class="rounded-circle"
+                    style="width: 40px; height: 40px;">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/login.html">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EL ROPERO DE LILY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Prendas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Mujer</a></li>
+                            <li><a class="dropdown-item" href="#">Hombre</a></li>
+                            <li><a class="dropdown-item" href="#">Niñas</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    
+
+        <div id="lista-articulos" class="container">
+            <h1 id="encabezado" class="encabezado"></h1>
+
+
+            <div class="row">
+
+                
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="/images/blusa.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>blusa</h4>
+                            <p>lili</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$10000 <span class="u-pull-right ">$8000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="1">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="/images/bolso.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>bolso</h4>
+                            <p>lili</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$10000 <span class="u-pull-right ">$8000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="/images/camisa.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>camisa</h4>
+                            <p>lili</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$10000 <span class="u-pull-right ">$8000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="/images/chaqueta (2).jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>chaqueta</h4>
+                            <p>Juan Pedro</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$200 <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="4">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="./images/chaquetajean.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4> chequeta jean</h4>
+                            <p>Juan Pedro</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$200 <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="four columns">
+                    <div class="card">
+                        <img src="./images/pantalon.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>pantalon</h4>
+                            <p>lili</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$10000 <span class="u-pull-right ">$8000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito"
+                                data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+
+            </div> 
+        </div>
+    
+        <footer class="bg-secondary text-white text-center py-3">
+            <p class="mb-0">&copy; 2023 Tienda de Ropa Usada El Ropero de Lily</p>
+        </footer>
+
+
+        < <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+
+        </script>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- ... (tu código existente) ... -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logup</title>
@@ -9,18 +11,17 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
 
-    <script src="./loguin.js" defer></script>
+
 
     <style>
-
-header {
+        header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 5px;
         }
-         
-        
+
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -28,11 +29,13 @@ header {
             padding: 0;
             text-align: center;
         }
+
         .mar {
             max-width: 400px;
             margin: 0 auto;
             text-align: center;
         }
+
         .container {
             max-width: 400px;
             max-height: auto;
@@ -42,19 +45,24 @@ header {
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
+
         h2 {
             margin-top: 0;
         }
+
         form {
             text-align: left;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             font-weight: bold;
         }
+
         input[type="text"],
         input[type="email"],
         input[type="password"] {
@@ -63,6 +71,7 @@ header {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .btn {
             display: inline-block;
             background-color: #007bff;
@@ -72,21 +81,23 @@ header {
             border-radius: 5px;
             cursor: pointer;
         }
+
         .navigation {
             margin-top: 20px;
         }
+
         .search-bar {
             width: 50%;
             padding: 10px;
             border: 1px solid #cccccc;
             border-radius: 5px;
             align-items: center;
-           
+
         }
     </style>
 
-
 </head>
+
 <body>
     <header>
         <h1>Tienda de Ropa Usada Online</h1>
@@ -94,7 +105,7 @@ header {
     </header>
     <div class="container">
         <h2>Registro</h2>
-        <form action="#" method="post">
+        <form action="#" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -123,12 +134,50 @@ header {
         </form>
         <div class="navigation">
             <a href="login.html">Iniciar Sesión</a> |
-            
         </div>
     </div>
-    
+
     <footer class="bg-secondary text-white text-center py-3">
+        <!-- ... (tu código existente) ... -->
         <p class="mb-0">&copy; 2023 Tienda de Ropa Usada El Ropero de Lily</p>
     </footer>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+    
+            // Validar el formato del correo electrónico
+            var emailPattern = /^\w+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Por favor, ingresa un correo electrónico válido.");
+                return false;
+            }
+    
+            // Validar la longitud de la contraseña
+            if (password.length < 8) {
+                alert("La contraseña debe tener al menos 8 caracteres.");
+                return false;
+            }
+    
+            // Validar que las contraseñas coincidan
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden.");
+                return false;
+            }
+    
+            // Si todas las validaciones son exitosas, mostrar un mensaje de registro exitoso
+            alert("¡Tu registro fue exitoso!");
+    
+            // Redirigir al usuario a otra página 
+            window.location.href = "./login.html";
+    
+            // Evitar que el formulario se envíe
+            return false;
+        }
+    </script>
+    
 </body>
+
 </html>
